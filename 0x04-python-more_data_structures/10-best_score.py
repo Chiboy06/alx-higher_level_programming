@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 def best_score(a_dictionary):
     # If the dictionary is not empty, return the key with the biggest value
     if a_dictionary:
