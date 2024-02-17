@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+import json
 
 class Base:
     '''A representation of the base in OOP'''
@@ -38,7 +39,7 @@ class Base:
                 list_dicts = [obj.to_dictionary() for obj in list_objs]
                 jsonfile.write(Base.to_json_string(list_dicts))
 
-     @staticmethod
+    @staticmethod
     def from_json_string(json_string):
         """Return the deserialization of a JSON string.
 
@@ -68,7 +69,7 @@ class Base:
             new.update(**dictionary)
             return new
 
-     @classmethod
+    @classmethod
     def load_from_file(cls):
         """Return a list of classes instantiated from a file of JSON strings.
 
